@@ -1,0 +1,25 @@
+{
+    "name": "string",
+    "image": "url string",
+    "link": "url string",
+    "tags": ["tag1", "tag2", "tag3"],
+    "thumbsUp": "integer",
+    "thumbsDown": "integer",
+    "reviews": [
+        {
+            "reviewTitle": "string",
+            "reviewText": "string", 
+            "reviewDate": "DATE Obj"
+        },
+        {
+            "reviewTitle": "string",
+            "reviewText": "string", 
+            "reviewDate": "DATE Obj"
+        },
+        {
+            "reviewTitle": "string",
+            "reviewText": "string", 
+            "reviewDate": "DATE Obj"
+        }
+    ]
+}
