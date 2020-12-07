@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
+import NewResourceForm from './components/NewResourceForm.js';
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
   const [serverRes, setServerRes] = useState("");
 
   async function getServerRes() {
-    const res = await axios.get("http://localhost:3000/pageLoad");
+    const res = await axios.get("http://localhost:8000/pageLoad");
     console.log(res.data);
     setServerRes(res.data);
   }
@@ -28,6 +29,9 @@ function App() {
       <h1>side_prjct</h1>
       <p>{pageLoad}</p>
       <p>Server Response: {serverRes}</p>
+      <div>
+        <NewResourceForm />
+      </div>
     </div>
   );
 }
