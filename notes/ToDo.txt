@@ -1,0 +1,40 @@
+Landing Page Functions
+****************************
+1. Display Prompt for Email
+2. Collect and Validate Email Input
+3. Submit Email Input to Storage
+4. Redirect to Home Page
+
+
+Home Page Functions
+****************************
+1. Display Categories Nav Bar
+2. Display "Popular" Resources
+    - queries db (based on "ranking" attribute)
+3. Display New Resources
+    - queries db (based on "date" created attribute)
+3. Display Link to Home Page
+4. Display Link/Prompt to Share/Create Resource
+    - link redirects to create resource page
+
+
+Create Resource Page Functions
+****************************
+1. Displays Link to Home Page
+2. Displays Form to Create Resource
+3. Validates Input Fields to Conform to Requirements
+4. Submits Form to Server
+    - Form is parsed and packaged for DB insertion
+        + Resource URL is used to scrape image/screenshot of resource (puppeteer)
+        + Data is validated for security (library?)
+    - Server Inserts New Resource into DB
+        + Error Handling (error message to user)
+        + Success Message to user and redirect to where?
+
+
+
+Search Function 
+****************************
+Mongo Atlas Search
+* queries document description and title fields
+    + combines resulting scores to return results ??
