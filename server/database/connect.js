@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+
+
 //db connection
 async function connectToDB() {    
     try {
@@ -8,7 +10,6 @@ async function connectToDB() {
             useUnifiedTopology: true
         });
         console.log("connected to db!");
-        console.log(connection);
         return connection;
     }
     catch(err) {
@@ -17,7 +18,6 @@ async function connectToDB() {
     }
 }
 
-// const DB = connectToDb();
 
 module.exports = {
     connectToDB: connectToDB

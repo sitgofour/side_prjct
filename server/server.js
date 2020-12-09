@@ -3,10 +3,10 @@ const app = express()
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
-const { Resource } = require('./database/Resource.js');
 const { connectToDB } = require('./database/connect.js');
+const { postNewResourceToDB } = require('./database/databaseOps.js');
 
-const DB = connectToDB();
+
 
 // Middleware
 app.use(cors());
@@ -18,12 +18,13 @@ app.get('/pageLoad', function (req, res) {
 });
 
 app.post('/newResource', function (req, res) {
-  // give this resource object to separate function that send to db
-    const newResource = new Resource({
+
+    const newResource = {
       title: req.body.newTitle,
       link: req.body.newLink,
       description: req.body.newDescription
-    });
+    };
+    postNewResourceToDB(newResource);
 
     res.send('got the new resource!');
 })
