@@ -1,5 +1,6 @@
 const { Resource } = require('./Resource.js');
 const { connectToDB } = require('./connect.js');
+const { get } = require('mongoose');
 const DB = connectToDB();
 
 
@@ -25,6 +26,13 @@ async function postNewResourceToDB(resourceObj) {
 }
 
 
+async function getResourceFromDB() {
+    const records = await Resource.find({});
+    return records;
+}
+
+
 module.exports = {
-    postNewResourceToDB: postNewResourceToDB
+    postNewResourceToDB: postNewResourceToDB,
+    getResourceFromDB: getResourceFromDB,
 }
