@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import NewResourceForm from './components/NewResourceForm.js';
-
+import LandingPage from './pages/LandingPage.js';
 
 function App() {
 
@@ -39,13 +39,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>side_prjct</h1>
-      <p>{pageLoad}</p>
-      <p>Server Response: {serverRes}</p>
-      <div>
-        <NewResourceForm />
-        
-      </div>
+      <LandingPage />
     </div>
   );
 }
