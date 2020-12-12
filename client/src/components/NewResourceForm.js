@@ -2,10 +2,13 @@ import { useState } from 'react';
 import axios from 'axios';
 
 function NewResourceForm() {
+    const [resourceForm, setResourceForm] = useState({
+        title: "",
+        description: "",
+        category: "",
+        resourceUrl: "",
+    });
 
-    const [resourceTitle, setResourceTitle] = useState("");
-    const [resourceLink, setResourceLink] = useState("");
-    const [resourceDesc, setResourceDesc] = useState("");
 
 // This function should be moved to own file
     async function postResourceToDB(newResource) {
@@ -19,34 +22,39 @@ function NewResourceForm() {
     }
 
     function handleInputChange(e) {
-        const target = e.target.name;
-        const val = e.target.value;
+        const name = e.target.name;
+        const value = e.target.value;
 
-        if(target === "title") setResourceTitle(val);
-        if(target === "link") setResourceLink(val);
-        if(target === "description") setResourceDesc(val);
+        // not sure about this ???
+        setResourceForm({
+            ...resourceForm,
+            [name]: value
+        });
     }
 
-    function handleFormSubmit() {
+    function handleFormSubmit(e) {
+
         const newResource = {
-            newTitle: resourceTitle,
-            newLink: resourceLink,
-            newDescription: resourceDesc
+            title: resourceForm.title,
+            description: resourceForm.description,
+            category: resourceForm.category,
+            resourceUrl: resourceForm.resourceUrl,
         }
-        postResourceToDB(newResource);
+
+        console.log(newResource);
+        // postResourceToDB(newResource);
     } 
 
     return (
         <div>
             <form>
                 <input name="title" type="text" onChange={handleInputChange}/>
-                <input name="link" type="text" onChange={handleInputChange}/>
                 <input name="description" type="text" onChange={handleInputChange}/>
+                <input name="category" type="text" onChange={handleInputChange}/>
+                <input name="resourceUrl" type="text" onChange={handleInputChange}/>
             </form>
             <button onClick={handleFormSubmit}>Submit</button>
-            <p>{resourceTitle}</p>
-            <p>{resourceLink}</p>
-            <p>{resourceDesc}</p>
+            {}
         </div>
     )
 }
