@@ -3,6 +3,7 @@ import './App.css';
 import axios from 'axios';
 import NewResourceForm from './components/NewResourceForm.js';
 import LandingPage from './pages/LandingPage.js';
+import HomePage from './pages/HomePage.js';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
   return (
     <div className="App">
       {/* <LandingPage /> */}
+      <HomePage />
       <NewResourceForm />
     </div>
   );
