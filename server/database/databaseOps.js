@@ -39,7 +39,6 @@ async function postNewResourceToDB(resourceObj) {
     });
 }
 
-
 async function getResourceFromDB() {
     const records = await Resource.find({});
     return records;

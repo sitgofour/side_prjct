@@ -41,7 +41,6 @@ function NewResourceForm() {
             resourceUrl: resourceForm.resourceUrl,
         }
 
-        console.log(newResource);
         postResourceToDB(newResource);
     } 
 
