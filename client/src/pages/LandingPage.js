@@ -44,7 +44,6 @@ function LandingPage() {
                 <img src={landingMainImage}/>
             </div>
         </div>
-
     )
 }
 
