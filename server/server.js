@@ -26,9 +26,10 @@ app.get('/getDatabaseResource', async function(req, res) {
 app.post('/newResource', function (req, res) {
 
     const newResource = {
-      title: req.body.newTitle,
-      link: req.body.newLink,
-      description: req.body.newDescription
+      title: req.body.title,
+      description: req.body.description,
+      category: req.body.category,
+      resourceUrl: req.body.resourceUrl,
     };
     
     postNewResourceToDB(newResource);

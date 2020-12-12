@@ -42,7 +42,7 @@ function NewResourceForm() {
         }
 
         console.log(newResource);
-        // postResourceToDB(newResource);
+        postResourceToDB(newResource);
     } 
 
     return (

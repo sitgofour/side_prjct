@@ -7,12 +7,26 @@ const DB = connectToDB();
 
 async function postNewResourceToDB(resourceObj) {
 
-    const { title, link, description } = resourceObj;
+    const { title, description, category, resourceUrl } = resourceObj;
+
+// TODO //
+
+    // get image with resourceUrl
+    // const newImageUrl = fetchImageUrl(resourceUrl);
+
+    // get iframe from youtube
+    // const iframeData = fetchYoutubeIFrame(resourceUrl);
 
     const newResource = new Resource({
         title: title,
-        link: link,
         description: description,
+        category: category,
+        resourceUrl: resourceUrl,
+        imageUrl: "",
+        userRating: null,
+        reviewsList: [],
+        searchTags: [],
+        youTubeIframe: "",
         dateCreated: new Date()
       });
 
