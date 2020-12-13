@@ -19,12 +19,17 @@ function Header() {
         text-decoration: none;
     `
 
+    const HeaderLogo = styled.a`
+        color: rgba(255,197,115,1);
+
+    `
+
     return (
         <div>
             <HeaderLayout>
-                <a>
+                <HeaderLogo>
                     Engage
-                </a>
+                </HeaderLogo>
                 <NavLayout>
                     <NavLink href="">Home</NavLink>
                     <NavLink href="">Resources</NavLink>

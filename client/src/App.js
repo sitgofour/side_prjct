@@ -40,9 +40,9 @@ function App() {
 
   return (
     <div className="App">
-      {/* <LandingPage /> */}
-      <HomePage />
-      <NewResourceForm />
+      <LandingPage />
+
+      {/* <HomePage /> */}
     </div>
   );
 }
