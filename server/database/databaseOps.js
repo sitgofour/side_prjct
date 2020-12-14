@@ -39,7 +39,7 @@ async function postNewResourceToDB(resourceObj) {
     });
 }
 
-async function getResourceFromDB() {
+async function queryAllResources() {
     const records = await Resource.find({});
     return records;
 }
@@ -47,5 +47,5 @@ async function getResourceFromDB() {
 
 module.exports = {
     postNewResourceToDB: postNewResourceToDB,
-    getResourceFromDB: getResourceFromDB,
+    queryAllResources: queryAllResources,
 }

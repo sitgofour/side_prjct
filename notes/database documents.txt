@@ -1,0 +1,41 @@
+// {
+//     "title": "string",
+//     "link": "url string",
+//     "description": "string", 
+//     "tags": ["tag1", "tag2", "tag3"],
+//     "thumbsUp": "integer",
+//     "thumbsDown": "integer",
+//     "date_created": "DATE",
+//     "reviews": [
+//         {
+//             "reviewTitle": "string",
+//             "reviewText": "string", 
+//             "reviewDate": "DATE Obj"
+//         },
+//         {
+//             "reviewTitle": "string",
+//             "reviewText": "string", 
+//             "reviewDate": "DATE Obj"
+//         },
+//         {
+//             "reviewTitle": "string",
+//             "reviewText": "string", 
+//             "reviewDate": "DATE Obj"
+//         }
+//     ]
+// }
+
+// // current resource schema
+
+// const resourceSchema = new Schema({
+//     title: String,
+//     description: String,
+//     category: String,
+//     resourceUrl: String,
+//     imageUrl: String,
+//     userRating: Number,
+//     reviewsList: Array,
+//     searchTags: Array,
+//     youTubeIframe: String,
+//     dateCreated: Date,
+// });

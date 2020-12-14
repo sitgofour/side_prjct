@@ -4,7 +4,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 const { connectToDB } = require('./database/connect.js');
-const { postNewResourceToDB, getResourceFromDB } = require('./database/databaseOps.js');
+const { postNewResourceToDB, queryAllResources } = require('./database/databaseOps.js');
 
 const { runPopulate } = require('./database/populateDB.js');
 
@@ -18,11 +18,11 @@ app.get('/pageLoad', function(req, res) {
   res.send('Hello World')
 });
 
-app.get('/getDatabaseResource', async function(req, res) {
-  const dbResponse = await getResourceFromDB();
+app.get('/getAllResources', async function(req, res) {
+  const dbResponse = await queryAllResources();
   console.log("response here: ", dbResponse);
   res.send(dbResponse);
-})
+});
 
 app.post('/newResource', function (req, res) {
 
