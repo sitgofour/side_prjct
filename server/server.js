@@ -7,6 +7,7 @@ const { connectToDB } = require('./database/connect.js');
 const { postNewResourceToDB, queryAllResources } = require('./database/databaseOps.js');
 
 const { runPopulate } = require('./database/populateDB.js');
+const { getResourceMetaData } = require('./helpers/getResourceMetaData.js');
 
 
 // Middleware
@@ -29,7 +30,7 @@ app.post('/newResource', function (req, res) {
     const newResource = {
       title: req.body.title,
       description: req.body.description,
-      category: req.body.category,
+      categories: req.body.category,
       resourceUrl: req.body.resourceUrl,
     };
     
@@ -43,4 +44,7 @@ app.listen(8000, () => {
 
 
 // runPopulate();
+// getResourceMetaData("https://www.youtube.com/watch?v=pAfnia7-rMk");
+// getResourceMetaData("https://youtu.be/pAfnia7-rMk");
+
 

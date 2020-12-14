@@ -2,34 +2,39 @@
 
 const resourcesList = [
     {
-        title: "new title one",
-        description: "new description one",
-        category: "category one",
-        resourceUrl: "https://google.com"
+        title: "Kahoot!",
+        description: "Descriptions of the Kahoot Platform",
+        categories: ["science", "math", "language arts"],
+        resourceUrl: "https://kahoot.com/",
+        userRatings: [5],
     },
     {
-        title: "new title one",
-        description: "new description one",
-        category: "category one",
-        resourceUrl: "https://google.com"
+        title: "Kahoot!",
+        description: "Descriptions of the Kahoot Platform",
+        categories: ["science", "math", "language arts"],
+        resourceUrl: "https://kahoot.com/",
+        userRatings: [5],
     },
     {
-        title: "new title one",
-        description: "new description one",
-        category: "category one",
-        resourceUrl: "https://google.com"
+        title: "Kahoot!",
+        description: "Descriptions of the Kahoot Platform",
+        categories: ["science", "math", "language arts"],
+        resourceUrl: "https://kahoot.com/",
+        userRatings: [5],
     },
     {
-        title: "new title one",
-        description: "new description one",
-        category: "category one",
-        resourceUrl: "https://google.com"
+        title: "Kahoot!",
+        description: "Descriptions of the Kahoot Platform",
+        categories: ["science", "math", "language arts"],
+        resourceUrl: "https://kahoot.com/",
+        userRatings: [5],
     },
     {
-        title: "new title one",
-        description: "new description one",
-        category: "category one",
-        resourceUrl: "https://google.com"
+        title: "Kahoot!",
+        description: "Descriptions of the Kahoot Platform",
+        categories: ["science", "math", "language arts"],
+        resourceUrl: "https://kahoot.com/",
+        userRatings: [5],
     },
 ]
 

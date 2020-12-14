@@ -8,10 +8,10 @@ const Schema = mongoose.Schema;
 const resourceSchema = new Schema({
     title: String,
     description: String,
-    category: String,
+    categories: Array,
     resourceUrl: String,
     imageUrl: String,
-    userRating: Number,
+    userRatings: Array,
     reviewsList: Array,
     searchTags: Array,
     youTubeIframe: String,

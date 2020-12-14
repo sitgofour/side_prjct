@@ -7,9 +7,9 @@ function ResourceCardSmall(props) {
     return (
         <div>
             <h1>title{title}</h1>
-            <p>description{description}</p>
             <p>link{resourceUrl}</p>
             <p>category{category}</p>
+            <p>description{description}</p>
             <p>id{_id}</p>
         </div>
     )

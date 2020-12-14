@@ -7,7 +7,7 @@ const DB = connectToDB();
 
 async function postNewResourceToDB(resourceObj) {
 
-    const { title, description, category, resourceUrl } = resourceObj;
+    const { title, description, categories, resourceUrl, userRatings } = resourceObj;
 
 // TODO //
 
@@ -20,10 +20,10 @@ async function postNewResourceToDB(resourceObj) {
     const newResource = new Resource({
         title: title,
         description: description,
-        category: category,
+        categories: categories,
         resourceUrl: resourceUrl,
         imageUrl: "",
-        userRating: null,
+        userRatings: userRatings,
         reviewsList: [],
         searchTags: [],
         youTubeIframe: "",
