@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 
@@ -37,17 +38,31 @@ function Header() {
         text-decoration: none;
     `
 
+    const routerLink = {
+        textDecoration: "none"
+    }
+
     return (
         <StyledHeader>
             <HeaderDiv>
-                <HeaderLogo href="">
-                    Engage
-                </HeaderLogo>
+                <Link to="/home" style={routerLink}>
+                    <HeaderLogo>
+                        Engage
+                    </HeaderLogo>
+                </Link>
                 <NavLayout>
-                    <NavLink href="">Home</NavLink>
-                    <NavLink href="">Resources</NavLink>
-                    <NavLink href="">Sign In</NavLink>
-                    <NavLink href="">Join</NavLink>
+                    <Link to="/home" style={routerLink}>
+                        <NavLink href="">Home</NavLink> 
+                    </Link>
+                    <Link to="/resources" style={routerLink}>
+                        <NavLink>Resources</NavLink>
+                    </Link>
+                    <Link to="/home" style={routerLink}>
+                        <NavLink href="">Sign In</NavLink>
+                    </Link>
+                    <Link to="/home" style={routerLink}>
+                        <NavLink href="">Join</NavLink>
+                    </Link>
                 </NavLayout>
             </HeaderDiv>
         </StyledHeader>    

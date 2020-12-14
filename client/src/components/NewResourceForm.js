@@ -43,6 +43,7 @@ function NewResourceForm() {
 
         postResourceToDB(newResource);
     } 
+    
 
     return (
         <div>
