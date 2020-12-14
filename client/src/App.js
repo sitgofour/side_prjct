@@ -1,23 +1,27 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-import NewResourceForm from './components/NewResourceForm.js';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Link, BrowserRouter } from "react-router-dom";
 import LandingPage from './pages/LandingPage.js';
 import HomePage from './pages/HomePage.js';
 
+
 function App() {
+
+  const ServerURl = "http://localhost:8000";
 
   const [pageLoad, setPageLoad] = useState("");
   const [serverRes, setServerRes] = useState("");
 
   async function getServerRes() {
-    const res = await axios.get("http://localhost:8000/pageLoad");
+    const res = await axios.get(`${ServerURl}/pageLoad`);
     console.log(res.data);
     setServerRes(res.data);
   }
 
   async function getDatabaseResource() {
-    const res = await axios.get("http://localhost:8000/getDatabaseResource");
+    const res = await axios.get(`${ServerURl}/getDatabaseResource`);
     console.log(res.data);
   }
 
@@ -39,11 +43,16 @@ function App() {
   
 
   return (
-    <div className="App">
-      {/* <LandingPage /> */}
-
-      <HomePage />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <LandingPage />
+        </Route>
+        <Route exact path="/home">
+          <HomePage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

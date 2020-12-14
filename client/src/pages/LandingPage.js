@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import landingMainImage from '../images/landing-hero.png';
 
@@ -71,7 +72,11 @@ function LandingPage() {
                     and resources <BoldSpan> to enhance <br/>
                         online teaching</BoldSpan>
                     </Paragraph>
-                    <Button>Learn more</Button>
+                    <Link to="/home">
+                        <Button>
+                            Learn more
+                        </Button>
+                    </Link>
                 </ContentDiv>
             </DescContainer>
             <HeroDiv>
