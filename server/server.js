@@ -6,6 +6,7 @@ const dotenv = require('dotenv').config();
 const { connectToDB } = require('./database/connect.js');
 const { postNewResourceToDB, getResourceFromDB } = require('./database/databaseOps.js');
 
+const { runPopulate } = require('./database/populateDB.js');
 
 
 // Middleware
@@ -39,3 +40,7 @@ app.post('/newResource', function (req, res) {
 app.listen(8000, () => {
     console.log('server listening on port 8000');
 });
+
+
+// runPopulate();
+
