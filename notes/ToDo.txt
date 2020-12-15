@@ -38,3 +38,13 @@ Search Function
 Mongo Atlas Search
 * queries document description and title fields
     + combines resulting scores to return results ??
+
+
+const toKebabCase = (string: string) =>
+  string
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/\s+/g, '-')
+    .replace(/[^A-Za-z0-9-]/g, '')
+    .toLowerCase();
+
+export default toKebabCase;

@@ -15,6 +15,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
  
+
+// api/pageLoad
 app.get('/pageLoad', function(req, res) {
   res.send('Hello World')
 });
@@ -24,6 +26,20 @@ app.get('/getAllResources', async function(req, res) {
   console.log("response here: ", dbResponse);
   res.send(dbResponse);
 });
+
+
+
+
+// api/newResource
+app.get('/api/categories/:categoryName', function(req, res) {
+
+  // query db
+  // select * where categories.includes(req.params.categoryName)
+  // should this field be indexed for search  
+
+  res.send("gotcha");
+});
+
 
 app.post('/newResource', function (req, res) {
 

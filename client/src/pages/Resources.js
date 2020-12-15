@@ -7,21 +7,21 @@ import Categories from './Categories.js';
 
 function Resources() {
 
-    const [allResources, setAllResources] = useState([]);
+    // const [allResources, setAllResources] = useState([]);
 
-    // move to .env
-    const ServerURl = "http://localhost:8000";
+    // // move to .env
+    // const ServerURl = "http://localhost:8000";
 
-    async function getAllResources() {
-        const resources = await axios.get(`${ServerURl}/getAllResources`);
-        return resources.data;
-    }
+    // async function getAllResources() {
+    //     const resources = await axios.get(`${ServerURl}/getAllResources`);
+    //     return resources.data;
+    // }
 
-    useEffect(() => {
-        getAllResources()
-        .then(resources => setAllResources(resources))
-        .catch(e => console.log(e));
-    }, [])
+    // useEffect(() => {
+    //     getAllResources()
+    //     .then(resources => setAllResources(resources))
+    //     .catch(e => console.log(e));
+    // }, [])
 
     return (
         <div>

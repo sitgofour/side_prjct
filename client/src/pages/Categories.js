@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import Header from '../components/Header';
+import { Switch, Route, Link, useRouteMatch } from 'react-router-dom';
 
 
-function Categories() {
+function Categories({ children }) {
+    let { path, url } = useRouteMatch();
 
-    const categoriesList = ["Zoom", "Productivity", "Math", "Science"];
+    const categoriesList = ["Zoom", "Productivity", "Math", "Science", "Language Arts"];
     const CategoriesLayout = styled.div`
 
     `
@@ -15,22 +16,24 @@ function Categories() {
     
     `
 
-    const Category = styled.div`
+    const CategoryLink = styled.div`
 
     `  
 
 
     return (
         <CategoriesLayout>
-            {/* <Header /> */}
-            <CategoriesLayout>
-                <Title></Title>
+            <CategoriesDiv>
+                <Title>Categories Title</Title>
                     {categoriesList.map(category => {
                         return (
-                            <Category>{category}</Category>
+                            <Link to={`${url}/${category}`}>
+                                <CategoryLink>{category}</CategoryLink>
+                            </Link>
                         )
                     })}
-            </CategoriesLayout>
+                    {/* {children} */}
+            </CategoriesDiv>
         </CategoriesLayout>
     )
 }
