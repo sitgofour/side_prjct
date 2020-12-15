@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from '../components/Header.js';
 import ResourceCardSmall from '../components/ResourceCardSmall.js';
 import axios from 'axios';
+import Categories from './Categories.js';
 
 
 function Resources() {
@@ -25,9 +26,10 @@ function Resources() {
     return (
         <div>
             <Header />
-            {allResources.map(r => {
+            {/* {allResources.map(r => {
                 return <ResourceCardSmall resource={r}/>
-            })}
+            })} */}
+            <Categories/>
         </div>
     )
 }
